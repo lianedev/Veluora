@@ -46,13 +46,18 @@ export default function VelouraFooter() {
     <footer style={{ fontFamily: "'Jost',sans-serif", background: "#f7f5f1", color: "#1a1714", width: "100%" }}>
 
       {/* Top bar — Follow + Newsletter */}
-      <div style={{
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        flexDirection: isMobile ? "column" : "row",
-        alignItems: isMobile ? "flex-start" : "center",
-        padding: `28px 40px`, borderBottom: "0.5px solid #ddd8d0",
-        gap: isMobile ? 20 : 24, flexWrap: "wrap",
-      }}>
+     <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: isMobile ? "column" : "row",
+          alignItems: isMobile ? "flex-start" : "center",
+          padding: "28px 40px",
+          borderBottom: "0.5px solid #ddd8d0",
+          gap: isMobile ? 20 : 24,
+          flexWrap: "wrap",
+        }}
+        >
         {/* Follow us */}
         <div style={{ display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
           <span style={{ fontSize: 11, letterSpacing: ".3em", textTransform: "uppercase", fontWeight: 500, whiteSpace: "nowrap" }}>
@@ -152,12 +157,17 @@ export default function VelouraFooter() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        flexDirection: isMobile ? "column" : "row",
-        alignItems: isMobile ? "flex-start" : "center",
-        padding: `18px 40px`, gap: 12, flexWrap: "wrap",
-      }}>
+      <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: isMobile ? "column" : "row",
+            alignItems: isMobile ? "flex-start" : "center",
+            padding: "18px 40px",
+            gap: 12,
+            flexWrap: "wrap",
+          }}
+        >
         <span style={{ fontSize: 12, color: "#9a8c7e", letterSpacing: ".02em" }}>
           © 2026 Veloura, created By <a href="https://craftedpixels-kohl.vercel.app/" style={{ color: "#2e2720" }}>CraftedPixels</a> All rights reserved.
         </span>
