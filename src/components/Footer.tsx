@@ -25,8 +25,8 @@ const socialLinks = [
 ];
 
 const companyLinks = ["About Veloura", "Contact Us", "Careers", "Brands"];
-const supportLinks = ["Help Center", "Track Order", "Shipping Info", "Returns", "How to Order", "How to Track"];
-const quickLinks   = ["Size Guide", "Sitemap", "My Account", "My Orders", "Cart", "Sign In / Sign Up"];
+const supportLinks = ["Help Center", "Track Order", "Shipping Info", "Returns", "How to Order", ];
+const quickLinks   = [, "Sitemap", "My Orders", "Cart", ];
 
 export default function VelouraFooter() {
   const [email, setEmail] = useState("");
