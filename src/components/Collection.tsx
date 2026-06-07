@@ -96,7 +96,19 @@ export default function VelouraNewProducts() {
       </h2>
 
       {/* Filters */}
-      
+      <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: isMobile ? 28 : 40, flexWrap: "wrap", overflowX: isMobile ? "auto" : "visible", paddingBottom: isMobile ? 4 : 0 }}>
+        {FILTERS.map(f => (
+          <button key={f} onClick={() => setFilter(f)} style={{
+            padding: "6px 16px",
+            border: `0.5px solid ${filter === f ? "#1a1714" : "#c8c0b6"}`,
+            background: filter === f ? "#1a1714" : "transparent",
+            color: filter === f ? "#fff" : "#6b6158",
+            fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase",
+            cursor: "pointer", fontFamily: "'Jost',sans-serif", fontWeight: 400,
+            borderRadius: 0, whiteSpace: "nowrap",
+          }}>{f}</button>
+        ))}
+      </div>
 
       {/* Product grid */}
       <div style={{

@@ -80,23 +80,35 @@ export default function VelouraNewProducts() {
   const sectionPad = isMobile ? "40px 16px 52px" : isTablet ? "52px 28px 60px" : "56px 32px 64px";
 
   return (
-    <div style={{ background: "#fff", padding: sectionPad, fontFamily: "'Jost', sans-serif", width: "100%" }}>
+    <div style={{ background: "background: #fdfdfb", padding: sectionPad, fontFamily: "'Jost', sans-serif", width: "100%" }}>
 
       {/* Section title */}
       <h2 style={{
         fontFamily: "'Playfair Display', serif",
         fontSize: isMobile ? 28 : isTablet ? 34 : 40,
-        fontWeight: 400,
+        fontWeight: 300,
         textAlign: "center",
         color: "#1a1714",
         marginBottom: isMobile ? 28 : 40,
         letterSpacing: "-.01em",
       }}>
-        New <em>Products</em>
+        Our <em>Products</em>
       </h2>
 
       {/* Filters */}
-      
+      <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: isMobile ? 28 : 40, flexWrap: "wrap", overflowX: isMobile ? "auto" : "visible", paddingBottom: isMobile ? 4 : 0 }}>
+        {FILTERS.map(f => (
+          <button key={f} onClick={() => setFilter(f)} style={{
+            padding: "6px 16px",
+            border: `0.5px solid ${filter === f ? "#1a1714" : "#c8c0b6"}`,
+            background: filter === f ? "#1a1714" : "transparent",
+            color: filter === f ? "#fff" : "#6b6158",
+            fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase",
+            cursor: "pointer", fontFamily: "'Jost',sans-serif", fontWeight: 400,
+            borderRadius: 0, whiteSpace: "nowrap",
+          }}>{f}</button>
+        ))}
+      </div>
 
       {/* Product grid */}
       <div style={{
