@@ -1,9 +1,16 @@
 import Navbar from "../../src/components/Navbar";
 import Footer from "../../src/components/Footer";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#fdfdfb] text-[#2e2720]">
+    <main className="min-h-screen bg-[#fdfdfb] text-[#2e2720] ">
       <Navbar />
 
       <section className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-12">
@@ -12,7 +19,10 @@ export default function ContactPage() {
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-[#6b6158]">
               Contact
             </p>
-            <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h1
+              className={`${playfair.className} mt-6 text-4xl font-semibold tracking-tight sm:text-5xl`}
+              style={{ fontFamily: playfair.style.fontFamily }}
+            >
               Speak with the Veloura team.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-[#6b6158]">
